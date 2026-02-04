@@ -1,0 +1,62 @@
+{
+  "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
+  "extends": ["ultracite/core"],
+  "javascript": {
+    "formatter": {
+      "quoteProperties": "preserve"
+    }
+  },
+  "linter": {
+    "rules": {
+      "nursery": {
+        "noUnusedExpressions": "off",
+        "useMaxParams": "off"
+      },
+      "style": {
+        "noMagicNumbers": "off",
+        "useForOf": "off",
+        "noExportedImports": "off",
+        "useNumericSeparators": "off",
+        "useSelfClosingElements": "off",
+        "noNestedTernary": "off",
+        "noEnum": "off",
+        "useConsistentTypeDefinitions": "off",
+        "useFilenamingConvention": "off"
+      },
+      "suspicious": {
+        "noArrayIndexKey": "off",
+        "noExplicitAny": "off",
+        "noConsole": "off",
+        "noAlert": "off",
+        "noUnknownAtRules": "off"
+      },
+      "complexity": {
+        "noForEach": "off",
+        "noUselessFragments": "off",
+        "noExcessiveCognitiveComplexity": "off",
+        "noBannedTypes": "off"
+      },
+      "correctness": {
+        "useExhaustiveDependencies": "on"
+      },
+      "performance": {
+        "noNamespaceImport": "off"
+      }
+    }
+  },
+  "assist": {
+    "actions": {
+      "source": {
+        "useSortedAttributes": "off"
+      }
+    }
+  },
+  "css": {
+    "parser": {
+      "tailwindDirectives": true
+    }
+  },
+  "files": {
+    "includes": ["!**/*.ejs"]
+  }
+}
